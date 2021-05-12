@@ -72,4 +72,4 @@ def is_subsequence(string_1, string_2, count=0):
             return is_subsequence(string_1, string_2, count + 1)
 
 
-is_subsequence("mork", "hi")
+# is_subsequence("mork", "hi")
