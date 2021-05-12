@@ -48,11 +48,11 @@ Assignment: 6C
 def is_subsequence(string_1, string_2, count=0):
     list_1 = []
     list_1[:0] = string_1
-    # print(list_1)
+    print(list_1)
 
     list_2 = []
     list_2[:0] = string_2
-    # print(list_2)
+    print(list_2)
 
     list_length_1 = len(string_1)
     list_length_2 = len(string_2)
@@ -60,16 +60,13 @@ def is_subsequence(string_1, string_2, count=0):
     if list_length_1 == 0 or list_length_2 == 0:
         print(False)
         return False
-    elif list_length_1 > 0 and list_length_2 == 0:
-        print(False)
-        return False
-    if count <= list_length_2:
-        if string_2[count] in string_1:
-            print(string_2[count])
+    if count < list_length_2:
+        if list_2[count] in list_1:
+            print(list_2[count])
             print(True)
             return True
         else:
             return is_subsequence(string_1, string_2, count + 1)
-
-
-# is_subsequence("mork", "hi")
+    else:
+        print(False)
+        return False
